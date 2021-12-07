@@ -19,8 +19,7 @@ const init = async() => {
     // Add entry
     const addOneToMongo = async(client, data) => {
         const db = await client.db("crypto");
-        const collection = `await`;
-        db.collection("history");
+        const collection = db.collection("history");
 
         collection.insertOne(data, function(err, res) {
             if (err) console.log("Inserting to Mongo failed.");
